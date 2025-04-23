@@ -10,25 +10,26 @@ services:
     build:
       context: ./source-code
       args:
-        REACT_APP_BACKEND_URL: "http://localhost:5000"
+        REACT_APP_BACKEND_URL:
     depends_on:
       - backend
+    volumes:
+      - frontend-build:/app/build
+    command: ["echo", "frontend built"]
+    # networks:
+    #   - app-net
+  nginx:
+    image: nginx:latest
     ports:
       - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - frontend-build:/usr/share/nginx/html:ro
+    depends_on:
+      - frontend
     networks:
       - app-net
-
-  # nginx:
-  #   image: nginx:alpine
-  #   ports:
-  #     - "80:80"
-  #   volumes:
-  #     - ./nginx.conf:/etc/nginx/nginx.conf:ro
-  #     - frontend-build:/usr/share/nginx/html:ro
-  #   depends_on:
-  #     - frontend
-  #     - backend
-  #   networks:
-  #     - app-net
 networks:
   app-net:
+volumes:
+  frontend-build:

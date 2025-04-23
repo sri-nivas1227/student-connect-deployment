@@ -1,7 +1,7 @@
 # Student-Connect Deployment
 
 **Repo Link**: https://github.com/sri-nivas1227/student-connect-deployment
-**Deployment Link**: http://ec2-3-89-161-97.compute-1.amazonaws.com
+**Deployment Link**: http://ec2-13-218-32-248.compute-1.amazonaws.com
 
 ## Steps
 
