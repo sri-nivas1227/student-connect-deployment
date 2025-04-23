@@ -1,3 +1,8 @@
+# Student-Connect Deployment
+
+**Repo Link**: https://github.com/sri-nivas1227/student-connect-deployment
+**Deployment Link**: http://ec2-3-89-161-97.compute-1.amazonaws.com
+
 ## Steps
 
 - Choose EC2 and create an instance
@@ -27,4 +32,9 @@
 - Add the contents of the nginx.conf in the ec2's /etc/nginx/nginx.conf file
 - run `docker-compose up --build -d`
 
-- check at http://ip-address
+- check at http://ec2-3-89-161-97.compute-1.amazonaws.com
+
+## Usage of AI
+
+- I've used ChatGPT to help with writing Dockerfiles and docker-compose files
+- I configured nginx and made my requests route between frontend and backend using LLMs
