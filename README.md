@@ -33,7 +33,7 @@
 - Add the contents of the nginx.conf in the ec2's /etc/nginx/nginx.conf file
 - run `docker-compose up --build -d`
 
-- check at http://ec2-3-89-161-97.compute-1.amazonaws.com
+- check at [http://ec2-34-234-92-183.compute-1.amazonaws.com/](http://ec2-34-234-92-183.compute-1.amazonaws.com/)
 
 ## Usage of AI
 
